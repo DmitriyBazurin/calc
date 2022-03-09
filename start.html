@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Home</title>
+   <script src="script.js"></script>
+   <style>
+       :root {
+           --color-gray: #999;
+       }
+       .mainContent {
+           width: 612px;
+           margin-top: 29px;
+           margin-left: 67px;
+           border: 1px solid var(--color-gray);
+           padding: 14px 25px 33px 19px;
+       }
+       .caption {
+           font-size: 17px;
+           font-weight: bolder;
+           color: var(--color-gray);
+       }
+       .inputContainer {
+           display: flex;
+           align-items: baseline;
+       }
+       .inputCaption {
+           font-size: 13px;
+           color: var(--color-gray);
+           width: 76px;
+           text-align: right;
+           flex-shrink: 0;
+       }
+       .numberInput {
+           width: 100%;
+           margin-left: 15px;
+           text-align: right;
+           height: 17px;
+           border: 1px solid var(--color-gray);
+       }
+       .numberInput:focus {
+           outline: 0 solid var(--color-gray);
+       }
+       .mathSign {
+           color: blue;
+           height: 40px;
+           display: flex;
+           align-items: center;
+           justify-content: flex-end;
+       }
+       .inputTopMargin {
+           margin-top: 25px;
+       }
+       .hint {
+           margin-top: 16px;
+           margin-left: 65px;
+           width: 630px;
+       }
+   </style>
+</head>
+<body>
+   <div class="mainContent">
+      <div class="caption">Вычитание длинных чисел</div>
+      <div class="inputContainer inputTopMargin">
+         <div class="inputCaption">Первое число</div>
+         <input id="first_input" type="text" tabindex="1" class="numberInput">
+      </div>
+      <div class="mathSign">-</div>
+      <div class="inputContainer">
+         <div class="inputCaption">Второе число</div>
+         <input id="second_input" type="text" tabindex="2" class="numberInput">
+      </div>
+      <div class="mathSign">=</div>
+      <div class="inputContainer">
+         <div class="inputCaption">Результат</div>
+         <input id="result" type="text" class="numberInput" readonly>
+      </div>
+   </div>
+   <div class="hint">
+      Введите значения в первое и второе число. После ввода вы увидите посчитанный результат. Если не указано хотя бы одно из чисел, то перерасчет выполняться не будет
+   </div>
+</body>
+</html>
